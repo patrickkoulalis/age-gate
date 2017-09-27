@@ -1,0 +1,138 @@
+.age_gate_cleared {
+	animation: cleared .8s;
+	opacity: 0;
+}
+
+#age_gate.age_gate_block {
+	display: block;
+}
+
+@keyframes cleared {
+	from{opacity: 1;}
+	100%{opacity: 0;}
+}
+
+#age_gate {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: rgba(0, 0, 0, .9);
+	display: none
+}
+
+#age_gate .inner {
+	position: relative;
+	padding: 20px;
+	background: white;
+	border-radius: 10px;
+	width: 50%;
+	height: 50%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#age_gate_warning {
+	text-align: center;
+}
+
+#age_gate_warning h1 {
+	font-size: 46px;
+}
+
+#age_gate_warning p {
+	font-size: 16px;
+	line-height: 1;
+	margin: 0;
+}
+
+
+#age_gate .inner > div {
+	flex-basis: 100%;
+}
+
+#age_gate button {
+	text-transform: uppercase;
+	padding: 10px 20px;
+	border: none;
+	color: white;
+	cursor: pointer;
+	flex-basis: 25%;
+	transition: transform .6s;
+}
+
+#age_gate button:hover,
+#age_gate button:focus {
+	outline: none;
+	transform: scale(1.1);
+}
+
+#age_gate .button_text_small,
+#age_gate .button_text_large {
+	display: block;
+}
+
+#age_gate .button_text_small{
+	font-size: 16px;
+}
+
+#age_gate .button_text_large{
+	font-size: 28px;
+}
+
+#age_gate button.leave {
+	border-right: whitesmoke solid 2px;
+	border-bottom: red solid 2px;
+	background: white;
+	color: red;
+}
+
+#age_gate button.leave:hover {
+	border-right: none;
+}
+
+#age_gate button.accept{
+	color: green;
+	background: white;
+	border-bottom: green solid 2px;
+}
+
+
+.flex-container {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  		display: -ms-flexbox;      /* TWEENER - IE 10 */
+  			display: -webkit-flex;     /* NEW - Chrome */
+  				display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.flex-center {
+	-webkit-justify-content: center;
+ 		justify-content: center;
+}
+
+.flex-middle {
+	-webkit-align-items: center;
+ 		align-items: center;
+}
+
+.flex-space {
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.flex-end {
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+
+.flex-wrap {
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
