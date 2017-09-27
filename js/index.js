@@ -12,9 +12,7 @@ accept.addEventListener('click', function(){
 	setTimeout(removeBlock, 8000);
 });
 
-leave.addEventListener('click', function(){
-	redirectHome();
-});
+leave.addEventListener('click', redirectHome);
 
 function redirectHome() {
    window.location="/";
